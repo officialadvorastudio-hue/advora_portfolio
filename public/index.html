@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Advora — AI-powered advertising agency. Cinematic video ads and visual campaigns." />
+  <title>Advora — AI Advertising Agency</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css" />
+
+  <!-- Preload first hero frame -->
+  <link rel="preload" as="image" href="assets/hero-frames/frame_0001.png" />
+</head>
+<body class="portfolio-page">
+
+  <!-- ======================================================
+       FIXED BASE CANVAS — SCROLL-DRIVEN PERFUME ANIMATION
+  ====================================================== -->
+  <div class="hero-bg-stage" aria-hidden="true">
+    <div class="hero-loading-bar" role="progressbar" aria-label="Loading hero animation" style="width:0%"></div>
+    <canvas id="hero-canvas"></canvas>
+  </div>
+
+  <!-- ======================================================
+       NAVIGATION
+  ====================================================== -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="Advora home">
+      ADV<span>O</span>RA
+    </a>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links-list">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links-list" role="list">
+      <li><a href="index.html" class="nav-link" aria-current="page">Portfolio</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Get in touch</a></li>
+    </ul>
+  </nav>
+
+  <main class="portfolio-content">
+
+  <!-- ======================================================
+       HERO — OPENING VIEWPORT OVER BASE ANIMATION
+  ====================================================== -->
+  <section class="hero-wrapper" aria-label="Hero — Perfume camera animation">
+    <!-- Text overlay — fades out as scroll progresses -->
+    <div class="hero-text">
+      <p class="hero-eyebrow">Advora Creative Studio</p>
+      <h1 class="hero-headline">Visuals that move people.</h1>
+      <p class="hero-subline">AI-powered advertising. Crafted to capture attention.</p>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       INTRO SECTION
+  ====================================================== -->
+  <section class="section-intro" aria-labelledby="intro-heading">
+    <div class="intro-left reveal">
+      <span class="crimson-rule" aria-hidden="true"></span>
+      <h2 id="intro-heading" class="intro-headline">
+        Advertising built to stop&nbsp;the&nbsp;scroll.
+      </h2>
+    </div>
+    <div class="intro-right reveal reveal-delay-2">
+      <p class="intro-eyebrow">What We Do</p>
+      <p class="intro-body">
+        Advora creates cinematic AI-powered video ads and visual campaigns for products and businesses, combining compelling creative direction with purposeful storytelling.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       VIDEO REEL — INFINITE HORIZONTAL CAROUSEL
+  ====================================================== -->
+  <section class="section-reel" aria-labelledby="reel-heading">
+
+    <div class="reel-header">
+      <div class="reveal">
+        <p class="reel-eyebrow">Our Work</p>
+        <h2 id="reel-heading" class="reel-title">The Reel.</h2>
+      </div>
+      <div class="reel-controls" role="group" aria-label="Carousel controls">
+        <button class="reel-btn" id="reel-prev" aria-label="Previous video">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button class="reel-btn" id="reel-next" aria-label="Next video">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Carousel viewport -->
+    <div class="carousel-viewport" role="region" aria-label="Video portfolio reel" aria-roledescription="carousel">
+      <div class="carousel-track" role="list">
+
+        <!-- Fragrance 01 -->
+        <div class="carousel-item" role="listitem">
+          <article
+            class="video-card"
+            data-video-src="assets/videos/fragrance-01.mp4"
+            data-video-title="Fragrance Campaign 01"
+            role="button"
+            tabindex="0"
+            aria-label="Play Fragrance Campaign 01"
+          >
+            <div class="video-card-inner">
+              <video
+                data-src="assets/videos/fragrance-01.mp4"
+                muted
+                loop
+                playsinline
+                preload="none"
+                aria-hidden="true"
+              ></video>
+              <div class="video-play-overlay" aria-hidden="true">
+                <div class="play-btn">
+                  <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                </div>
+              </div>
+            </div>
+            <div class="video-card-meta">
+              <p class="video-card-category">Fragrance</p>
+              <h3 class="video-card-title">Fragrance Campaign 01</h3>
+            </div>
+          </article>
+        </div>
+
+        <!-- Fragrance 02 -->
+        <div class="carousel-item" role="listitem">
+          <article
+            class="video-card"
+            data-video-src="assets/videos/fragrance-02.mp4"
+            data-video-title="Fragrance Campaign 02"
+            role="button"
+            tabindex="0"
+            aria-label="Play Fragrance Campaign 02"
+          >
+            <div class="video-card-inner">
+              <video
+                data-src="assets/videos/fragrance-02.mp4"
+                muted
+                loop
+                playsinline
+                preload="none"
+                aria-hidden="true"
+              ></video>
+              <div class="video-play-overlay" aria-hidden="true">
+                <div class="play-btn">
+                  <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                </div>
+              </div>
+            </div>
+            <div class="video-card-meta">
+              <p class="video-card-category">Fragrance</p>
+              <h3 class="video-card-title">Fragrance Campaign 02</h3>
+            </div>
+          </article>
+        </div>
+
+        <!-- Fragrance 03 -->
+        <div class="carousel-item" role="listitem">
+          <article
+            class="video-card"
+            data-video-src="assets/videos/fragrance-03.mp4"
+            data-video-title="Fragrance Campaign 03"
+            role="button"
+            tabindex="0"
+            aria-label="Play Fragrance Campaign 03"
+          >
+            <div class="video-card-inner">
+              <video
+                data-src="assets/videos/fragrance-03.mp4"
+                muted
+                loop
+                playsinline
+                preload="none"
+                aria-hidden="true"
+              ></video>
+              <div class="video-play-overlay" aria-hidden="true">
+                <div class="play-btn">
+                  <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                </div>
+              </div>
+            </div>
+            <div class="video-card-meta">
+              <p class="video-card-category">Fragrance</p>
+              <h3 class="video-card-title">Fragrance Campaign 03</h3>
+            </div>
+          </article>
+        </div>
+
+        <!-- Men's Watch -->
+        <div class="carousel-item" role="listitem">
+          <article
+            class="video-card"
+            data-video-src="assets/videos/mens-watch.mp4"
+            data-video-title="Men's Luxury Watch"
+            role="button"
+            tabindex="0"
+            aria-label="Play Men's Luxury Watch Campaign"
+          >
+            <div class="video-card-inner">
+              <video
+                data-src="assets/videos/mens-watch.mp4"
+                muted
+                loop
+                playsinline
+                preload="none"
+                aria-hidden="true"
+              ></video>
+              <div class="video-play-overlay" aria-hidden="true">
+                <div class="play-btn">
+                  <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                </div>
+              </div>
+            </div>
+            <div class="video-card-meta">
+              <p class="video-card-category">Luxury Accessories</p>
+              <h3 class="video-card-title">Men's Luxury Watch</h3>
+            </div>
+          </article>
+        </div>
+
+        <!-- Dog Harness -->
+        <div class="carousel-item" role="listitem">
+          <article
+            class="video-card"
+            data-video-src="assets/videos/dog-harness.mp4"
+            data-video-title="Dog Harness Campaign"
+            role="button"
+            tabindex="0"
+            aria-label="Play Dog Harness Campaign"
+          >
+            <div class="video-card-inner">
+              <video
+                data-src="assets/videos/dog-harness.mp4"
+                muted
+                loop
+                playsinline
+                preload="none"
+                aria-hidden="true"
+              ></video>
+              <div class="video-play-overlay" aria-hidden="true">
+                <div class="play-btn">
+                  <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                </div>
+              </div>
+            </div>
+            <div class="video-card-meta">
+              <p class="video-card-category">Pet Products</p>
+              <h3 class="video-card-title">Dog Harness Campaign</h3>
+            </div>
+          </article>
+        </div>
+
+        <!-- Interior Design -->
+        <div class="carousel-item" role="listitem">
+          <article
+            class="video-card"
+            data-video-src="assets/videos/interior-design.mp4"
+            data-video-title="EDIT Design House"
+            role="button"
+            tabindex="0"
+            aria-label="Play EDIT Design House Campaign"
+          >
+            <div class="video-card-inner">
+              <video
+                data-src="assets/videos/interior-design.mp4"
+                muted
+                loop
+                playsinline
+                preload="none"
+                aria-hidden="true"
+              ></video>
+              <div class="video-play-overlay" aria-hidden="true">
+                <div class="play-btn">
+                  <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                </div>
+              </div>
+            </div>
+            <div class="video-card-meta">
+              <p class="video-card-category">Interior Design</p>
+              <h3 class="video-card-title">EDIT Design House</h3>
+            </div>
+          </article>
+        </div>
+
+      </div><!-- /.carousel-track -->
+    </div><!-- /.carousel-viewport -->
+
+  </section>
+
+  <!-- ======================================================
+       STATIC AD GALLERY
+  ====================================================== -->
+  <section class="section-static" aria-labelledby="static-heading">
+    <div class="section-static-inner">
+      <header class="static-header reveal">
+        <p class="static-eyebrow">Static Creative</p>
+        <h2 id="static-heading" class="static-title">More than motion.</h2>
+        <p class="static-sub">Still campaigns crafted with the same editorial precision.</p>
+      </header>
+
+      <div class="static-grid" role="list" aria-label="Static image advertisements">
+
+        <article
+          class="static-card reveal reveal-delay-1"
+          role="button"
+          tabindex="0"
+          data-image-src="assets/static-ads/crimson-essence.png"
+          data-image-title="Crimson Essence — Luxury Fragrance Ad"
+          aria-label="View Crimson Essence static advertisement"
+        >
+          <div class="static-card-media">
+            <img src="assets/static-ads/crimson-essence.png" alt="Crimson Essence luxury fragrance advertisement" loading="lazy" />
+          </div>
+          <div class="static-card-meta">
+            <p class="static-card-category">Fragrance</p>
+            <h3 class="static-card-title">Crimson Essence</h3>
+          </div>
+        </article>
+
+        <article
+          class="static-card reveal reveal-delay-1"
+          role="button"
+          tabindex="0"
+          data-image-src="assets/static-ads/velaris-watch.png"
+          data-image-title="Velaris — Time Elevated Watch Ad"
+          aria-label="View Velaris watch static advertisement"
+        >
+          <div class="static-card-media">
+            <img src="assets/static-ads/velaris-watch.png" alt="Velaris Time Elevated luxury watch advertisement" loading="lazy" />
+          </div>
+          <div class="static-card-meta">
+            <p class="static-card-category">Luxury Accessories</p>
+            <h3 class="static-card-title">Velaris — Time Elevated</h3>
+          </div>
+        </article>
+
+        <article
+          class="static-card reveal reveal-delay-2"
+          role="button"
+          tabindex="0"
+          data-image-src="assets/static-ads/pawjoy-dog-toy.png"
+          data-image-title="Pawjoy Premium Dog Toy Advertisement"
+          aria-label="View Pawjoy dog toy static advertisement"
+        >
+          <div class="static-card-media">
+            <img src="assets/static-ads/pawjoy-dog-toy.png" alt="Pawjoy Premium Dog Toy advertisement" loading="lazy" />
+          </div>
+          <div class="static-card-meta">
+            <p class="static-card-category">Pet Products</p>
+            <h3 class="static-card-title">Pawjoy Premium Dog Toy</h3>
+          </div>
+        </article>
+
+        <article
+          class="static-card reveal reveal-delay-2"
+          role="button"
+          tabindex="0"
+          data-image-src="assets/static-ads/stillhouse-candle.png"
+          data-image-title="Stillhouse Sandalwood & Fig Candle"
+          aria-label="View Stillhouse candle static advertisement"
+        >
+          <div class="static-card-media">
+            <img src="assets/static-ads/stillhouse-candle.png" alt="Stillhouse Sandalwood and Fig Candle advertisement" loading="lazy" />
+          </div>
+          <div class="static-card-meta">
+            <p class="static-card-category">Home &amp; Lifestyle</p>
+            <h3 class="static-card-title">Stillhouse Sandalwood &amp; Fig</h3>
+          </div>
+        </article>
+
+        <article
+          class="static-card reveal reveal-delay-3"
+          role="button"
+          tabindex="0"
+          data-image-src="assets/static-ads/life-beautifully-edited.png"
+          data-image-title="Life Beautifully Edited"
+          aria-label="View Life Beautifully Edited static advertisement"
+        >
+          <div class="static-card-media">
+            <img src="assets/static-ads/life-beautifully-edited.png" alt="Life Beautifully Edited interior design advertisement" loading="lazy" />
+          </div>
+          <div class="static-card-meta">
+            <p class="static-card-category">Interior Design</p>
+            <h3 class="static-card-title">Life Beautifully Edited</h3>
+          </div>
+        </article>
+
+        <article
+          class="static-card reveal reveal-delay-3"
+          role="button"
+          tabindex="0"
+          data-image-src="assets/static-ads/modern-living-redefined.png"
+          data-image-title="Modern Living, Redefined"
+          aria-label="View Modern Living, Redefined static advertisement"
+        >
+          <div class="static-card-media">
+            <img src="assets/static-ads/modern-living-redefined.png" alt="Modern Living, Redefined interior design advertisement" loading="lazy" />
+          </div>
+          <div class="static-card-meta">
+            <p class="static-card-category">Interior Design</p>
+            <h3 class="static-card-title">Modern Living, Redefined</h3>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       CONTACT CTA
+  ====================================================== -->
+  <section class="section-cta" aria-labelledby="cta-heading">
+    <div class="section-cta-inner">
+
+      <div class="cta-eyebrow reveal">
+        <span class="crimson-dot" aria-hidden="true"></span>
+        New Projects
+      </div>
+
+      <h2 id="cta-heading" class="cta-headline reveal reveal-delay-1">
+        Have a product worth showing?
+      </h2>
+
+      <p class="cta-sub reveal reveal-delay-2">
+        Let's create something worth watching.
+      </p>
+
+      <button
+        class="cta-btn reveal reveal-delay-3"
+        id="cta-contact-btn"
+        aria-expanded="false"
+        aria-controls="email-reveal"
+      >
+        <span>Contact Advora</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+
+      <div class="email-reveal" id="email-reveal" role="status" aria-live="polite">
+        <span class="crimson-dot" aria-hidden="true"></span>
+        <a href="mailto:hello@advora.studio" id="email-link" aria-label="Send email to Advora">hello@advora.studio</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-logo" aria-label="Advora">ADV<span>O</span>RA</div>
+    <p class="footer-copy">&copy; 2024 Advora Creative Studio. All rights reserved.</p>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="index.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </footer>
+
+  </main><!-- /.portfolio-content -->
+
+  <!-- ======================================================
+       MEDIA MODAL (Video + Static Ad Lightbox)
+  ====================================================== -->
+  <div
+    class="video-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Media preview"
+    aria-hidden="true"
+  >
+    <div class="modal-inner">
+      <button class="modal-close" aria-label="Close media preview">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <video class="modal-video" controls playsinline preload="none"></video>
+      <img class="modal-image" alt="" />
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>

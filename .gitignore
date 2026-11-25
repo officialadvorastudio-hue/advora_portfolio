@@ -1,0 +1,10 @@
+# Raw source archives / duplicate assets (already extracted/copied into public/assets/)
+frames.zip
+sample ads/
+sample static ads/
+
+# OS / Editor / Python
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc

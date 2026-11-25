@@ -1,0 +1,5 @@
+name: Advora Portfolio Website
+version: 1.0.0
+description: AI advertising agency portfolio website for Advora
+deploy_dir: public
+server: python serve.py
